@@ -6,8 +6,7 @@ Tested on：
 > * OptiPlex 7060 
 > * OptiPlex 7070 
 
-
-
+<br/><br/>
 You need to run
 
 ` setup_var 0x8dc 0x2 `
@@ -22,7 +21,7 @@ in Grub to update DVMT settings first and after everytime you reset your bios.
 
 **Use this on other model may damage your computer!**
 
-
+<br/><br/>
 
 Replace intel ac9560 to DW1560/1830 if you need to use wireless function. Or you can just disable it in BIOS settings.
 
@@ -30,6 +29,8 @@ Replace intel ac9560 to DW1560/1830 if you need to use wireless function. Or you
 
 
 
+<br/>
+<br/>
 
 FileVault加密不可打开，开启会导致无法启动。此配置不能创建Wi-Fi诊断报告。
 
