@@ -32,8 +32,8 @@ Replace intel ac9560 to DW1560/1830 if you need to use wireless function. Or you
 <br/>
 <br/>
 
-FileVault加密不可打开，开启会导致无法启动。此配置不能创建Wi-Fi诊断报告。
+FileVault加密不可打开，开启会导致无法启动。
 
 **NEVER** enable FileVault on a hackintosh. 
 
-Wi-Fi Diagnostic Report can not be generated.
+
