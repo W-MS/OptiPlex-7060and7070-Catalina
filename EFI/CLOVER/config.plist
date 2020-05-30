@@ -4,8 +4,6 @@
 <dict>
 	<key>ACPI</key>
 	<dict>
-		<key>AutoMerge</key>
-		<false/>
 		<key>DSDT</key>
 		<dict>
 			<key>Debug</key>
@@ -69,8 +67,6 @@
 				<key>FixWAK</key>
 				<false/>
 			</dict>
-			<key>Name</key>
-			<string>DSDT.aml</string>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -79,87 +75,29 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					U0FUMA==
-					</data>
+					<data>U0FUMA==</data>
 					<key>Replace</key>
-					<data>
-					U0FUQQ==
-					</data>
+					<data>U0FUQQ==</data>
 				</dict>
 			</array>
-			<key>ReuseFFFF</key>
-			<false/>
-			<key>SlpSmiAtWake</key>
-			<false/>
 		</dict>
-		<key>DisableASPM</key>
-		<false/>
-		<key>DropTables</key>
-		<array>
-			<dict>
-				<key>Signature</key>
-				<string>MATS</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>DMAR</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>CpuPm</string>
-			</dict>
-			<dict>
-				<key>#Length</key>
-				<integer>720</integer>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>Cpu0Ist</string>
-			</dict>
-		</array>
-		<key>FixHeaders</key>
-		<true/>
-		<key>FixMCFG</key>
-		<false/>
-		<key>HaltEnabler</key>
-		<true/>
 		<key>SSDT</key>
 		<dict>
-			<key>EnableC2</key>
-			<true/>
-			<key>EnableC4</key>
-			<true/>
-			<key>EnableC6</key>
-			<true/>
-			<key>EnableC7</key>
-			<true/>
 			<key>Generate</key>
 			<dict>
-				<key>CStates</key>
-				<true/>
-				<key>PStates</key>
+				<key>PluginType</key>
 				<true/>
 			</dict>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
-		<key>#Arguments</key>
-		<string></string>
+		<key>Arguments</key>
+		<string>debug=0x100 keepsyms=1</string>
 		<key>DefaultVolume</key>
-		<string>macOS</string>
-		<key>HibernationFixup</key>
-		<false/>
+		<string>MacintoshHD</string>
 		<key>Timeout</key>
-		<integer>5</integer>
-	</dict>
-	<key>BootGraphics</key>
-	<dict>
-		<key>UIScale</key>
-		<integer>2</integer>
+		<integer>1</integer>
 	</dict>
 	<key>Devices</key>
 	<dict>
@@ -172,6 +110,11 @@
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
+		<key>USB</key>
+		<dict>
+			<key>FixOwnership</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>GUI</key>
 	<dict>
@@ -181,9 +124,16 @@
 			<string>Legacy</string>
 			<string>Recovery</string>
 		</array>
+		<key>Mouse</key>
+		<dict>
+			<key>Enabled</key>
+			<false/>
+		</dict>
 		<key>Scan</key>
 		<dict>
-			<key>Legacy</key>
+			<key>Entries</key>
+			<true/>
+			<key>Linux</key>
 			<false/>
 		</dict>
 		<key>Theme</key>
@@ -213,9 +163,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
-				<data>
-				g/kPDw==
-				</data>
+				<data>g/kPDw==</data>
 				<key>InfoPlistPatch</key>
 				<false/>
 				<key>MatchOS</key>
@@ -223,9 +171,7 @@
 				<key>Name</key>
 				<string>com.apple.driver.usb.AppleUSBXHCI</string>
 				<key>Replace</key>
-				<data>
-				g/k/Dw==
-				</data>
+				<data>g/k/Dw==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -233,9 +179,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
-				<data>
-				g/sPDw==
-				</data>
+				<data>g/sPDw==</data>
 				<key>InfoPlistPatch</key>
 				<false/>
 				<key>MatchOS</key>
@@ -243,24 +187,9 @@
 				<key>Name</key>
 				<string>com.apple.iokit.IOUSBHostFamily</string>
 				<key>Replace</key>
-				<data>
-				g/s/Dw==
-				</data>
+				<data>g/s/Dw==</data>
 			</dict>
 		</array>
-	</dict>
-	<key>RtVariables</key>
-	<dict>
-		<key>BooterConfig</key>
-		<string>0x28</string>
-		<key>CsrActiveConfig</key>
-		<string>0x67</string>
-		<key>MLB</key>
-		<string>C07WM5ZSJYVX94ADA</string>
-		<key>ROM</key>
-		<data>
-		32ryl/Je
-		</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
@@ -310,6 +239,17 @@
 		<string>F02055DC-62B2-4C8B-B3B2-79BD9097F25E</string>
 		<key>Version</key>
 		<string>1.0</string>
+	</dict>
+	<key>RtVariables</key>
+	<dict>
+		<key>BooterConfig</key>
+		<string>0x28</string>
+		<key>CsrActiveConfig</key>
+		<string>0x67</string>
+		<key>MLB</key>
+		<string>C07WM5ZSJYVX94ADA</string>
+		<key>ROM</key>
+		<data>32ryl/Je</data>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
